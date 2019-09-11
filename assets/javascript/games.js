@@ -47,6 +47,7 @@ $(document).ready(function () {
         $("#total-score").text(totalScore);
         checker()
 
+
     })
 
 
@@ -55,6 +56,7 @@ $(document).ready(function () {
         totalScore += crystal2;
         $("#total-score").text(totalScore);
         checker()
+
     })
 
     $("#crystal-3").on("click", function () {
@@ -62,6 +64,7 @@ $(document).ready(function () {
         totalScore += crystal3;
         $("#total-score").text(totalScore);
         checker()
+
     })
 
     $("#crystal-4").on("click", function () {
@@ -69,6 +72,7 @@ $(document).ready(function () {
         totalScore += crystal4;
         $("#total-score").text(totalScore);
         checker()
+
     })
 
     // console.log('totalScore', totalScore)
@@ -76,42 +80,56 @@ $(document).ready(function () {
 
     //if player score === computer random number
     //increase wins +1
-function checker(){
-    console.log("before if statement: ", totalScore, randomNum);
-    if (totalScore === randomNum) {
-        // console.log('win');
-        winCounter++
-        $("#win-counter").text(winCounter);
-        //reset
+    function checker() {
+        console.log("before if statement: ", totalScore, randomNum);
+        if (totalScore === randomNum) {
+            alert("You WIN!");
+            winCounter++
+            $("#win-counter").text(winCounter);
+            //reset
+            reset()
+
+
+
+        }
+        //if player score > computer random number
+        else if (totalScore > randomNum) {
+            alert("Bummer, you lost!")
+            lossCounter++
+            $("#loss-counter").text(lossCounter);
+            reset()
+        };
+    }
+
+
+        function reset() {
+        //reset crystals
+        crystal1 = Math.floor(Math.random() * 10 + 2);
+            console.log(crystal1);
+        crystal2 = Math.floor(Math.random() * 10 + 2);
+            console.log(crystal2);
+        crystal3 = Math.floor(Math.random() * 10 + 2);
+            console.log(crystal3);
+        crystal4 = Math.floor(Math.random() * 10 + 2);
+            console.log(crystal4);
+        
+
+        //reset random 
+        randomNum = Math.floor(Math.random() * 101 + 19);
+        console.log(randomNum);
+        $("#randomNumber").text(randomNum);
+
+
+
+        //reset total score
+        totalScore = 0
+        $("#total-score").text(totalScore);
+
+        
+
 
 
     }
-    //if player score > computer random number
-    else if (totalScore > randomNum) {
-        
-        // console.log('loss');
-        lossCounter++
-        $("#loss-counter").text(lossCounter);
-    };
-}
-    //reset
-
-
-
-
-
-
-    //game restarts if player wins or loses
-
-    //computer generates new random number & 4 new random crystal values
-
-
-
-
-
-
-
-
 
 
 });
