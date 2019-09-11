@@ -33,26 +33,21 @@ $(document).ready(function () {
 
 
 
-    //crystal5.value
-
-    //hide crystal amount until player clicks crystal
+    
 
     // on clicking a crystal, add random crystal1 
     // click each crystal, console.log random crystal value
     $("#crystal-1").on("click", function () {
-        console.log(crystal1);
         // crystalOneScore += crystal1;
         totalScore += crystal1;
         //add the value to the to var totalScore
         $("#total-score").text(totalScore);
         checker()
 
-
     })
 
 
     $("#crystal-2").on("click", function () {
-        console.log(crystal2);
         totalScore += crystal2;
         $("#total-score").text(totalScore);
         checker()
@@ -60,7 +55,6 @@ $(document).ready(function () {
     })
 
     $("#crystal-3").on("click", function () {
-        console.log(crystal3);
         totalScore += crystal3;
         $("#total-score").text(totalScore);
         checker()
@@ -68,20 +62,18 @@ $(document).ready(function () {
     })
 
     $("#crystal-4").on("click", function () {
-        console.log(crystal4);
         totalScore += crystal4;
         $("#total-score").text(totalScore);
         checker()
 
     })
 
-    // console.log('totalScore', totalScore)
+   
 
 
     //if player score === computer random number
     //increase wins +1
     function checker() {
-        console.log("before if statement: ", totalScore, randomNum);
         if (totalScore === randomNum) {
             alert("You WIN!");
             winCounter++
