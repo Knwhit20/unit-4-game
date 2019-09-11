@@ -33,7 +33,7 @@ $(document).ready(function () {
 
 
 
-    
+
 
     // on clicking a crystal, add random crystal1 
     // click each crystal, console.log random crystal value
@@ -68,7 +68,7 @@ $(document).ready(function () {
 
     })
 
-   
+
 
 
     //if player score === computer random number
@@ -94,17 +94,17 @@ $(document).ready(function () {
     }
 
 
-        function reset() {
+    function reset() {
         //reset crystals
         crystal1 = Math.floor(Math.random() * 10 + 2);
-            console.log(crystal1);
+        console.log(crystal1);
         crystal2 = Math.floor(Math.random() * 10 + 2);
-            console.log(crystal2);
+        console.log(crystal2);
         crystal3 = Math.floor(Math.random() * 10 + 2);
-            console.log(crystal3);
+        console.log(crystal3);
         crystal4 = Math.floor(Math.random() * 10 + 2);
-            console.log(crystal4);
-        
+        console.log(crystal4);
+
 
         //reset random 
         randomNum = Math.floor(Math.random() * 101 + 19);
@@ -117,7 +117,7 @@ $(document).ready(function () {
         totalScore = 0
         $("#total-score").text(totalScore);
 
-        
+
 
 
 
