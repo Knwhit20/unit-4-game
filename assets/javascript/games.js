@@ -36,6 +36,12 @@ console.log(crystal3);
 var crystal4 = Math.floor(Math.random() * 10 + 2)
 console.log(crystal4);
 
+var crystal5 = {
+    color:"",
+    value:"",
+    clicked:true
+}
+//crystal5.value
 
 //hide crystal amount until player clicks crystal
 
