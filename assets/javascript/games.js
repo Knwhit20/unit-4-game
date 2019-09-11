@@ -43,36 +43,63 @@ $(document).ready(function () {
         console.log(crystal1);
         // crystalOneScore += crystal1;
         totalScore += crystal1;
-        // console.log(crystalOneScore)
-        console.log('totalScore', totalScore)
         //add the value to the to var totalScore
         $("#total-score").text(totalScore);
+        checker()
 
     })
 
 
     $("#crystal-2").on("click", function () {
         console.log(crystal2);
+        totalScore += crystal2;
+        $("#total-score").text(totalScore);
+        checker()
     })
 
     $("#crystal-3").on("click", function () {
         console.log(crystal3);
+        totalScore += crystal3;
+        $("#total-score").text(totalScore);
+        checker()
     })
 
     $("#crystal-4").on("click", function () {
         console.log(crystal4);
+        totalScore += crystal4;
+        $("#total-score").text(totalScore);
+        checker()
     })
 
-    console.log('totalScore', totalScore)
+    // console.log('totalScore', totalScore)
 
-
-    //update player score counter
 
     //if player score === computer random number
     //increase wins +1
+function checker(){
+    console.log("before if statement: ", totalScore, randomNum);
+    if (totalScore === randomNum) {
+        // console.log('win');
+        winCounter++
+        $("#win-counter").text(winCounter);
+        //reset
 
+
+    }
     //if player score > computer random number
-    //increase losses by +1
+    else if (totalScore > randomNum) {
+        
+        // console.log('loss');
+        lossCounter++
+        $("#loss-counter").text(lossCounter);
+    };
+}
+    //reset
+
+
+
+
+
 
     //game restarts if player wins or loses
 
