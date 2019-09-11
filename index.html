@@ -25,7 +25,7 @@
 
 <body>
 
-    <div class="jumbotron">
+    <div class="jumbotron text-center">
         <h1 class="display-4">Crystals Collector!</h1>
         <hr class="my-4">
         <p>You will be given a random number at the start of the game.
@@ -45,20 +45,20 @@
     </div>
 
     <div class="row" id="gameSection">
-        <div class="col md 4" id="randomNumber">
-            <p>Random Number:</p>
+        <div class="col md 4">Random Number:
+            <p id="randomNumber"></p>
         </div>
 
         <div class="col md 8" id="crystalButton">
 
 
-            <button id="button-1"><img src="assets/images/blue crystal.jpeg"></button>
+            <button id="crystal-1"><img src="assets/images/blue crystal.jpeg"></button>
 
-            <button id="button-2"><img src="assets/images/yellow crystal.jpeg"></button>
+            <button id="crystal-2"><img src="assets/images/yellow crystal.jpeg"></button>
 
-            <button id="button-3"><img src="assets/images/purple crystal.jpeg"></button>
+            <button id="crystal-3"><img src="assets/images/purple crystal.jpeg"></button>
 
-            <button id="button-4"><img src="assets/images/red crystal.jpeg"></button>
+            <button id="crystal-4"><img src="assets/images/red crystal.jpeg"></button>
 
         </div>
     </div>
@@ -81,13 +81,15 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js">
-    </script>
-    <script src="assets/javascript/games.js"></script>
-   
-        
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+     </script>
 
-    
+    <script src="assets/javascript/games.js"></script>
+
+
+
+
 
 </body>
 
