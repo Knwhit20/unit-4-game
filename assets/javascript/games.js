@@ -1,62 +1,82 @@
-$(document).ready(function(){
+$(document).ready(function () {
+
+    //start function
+
+    //define variables
+    var randomNum = 0
+    var totalScore = 0;
 
 
-//define variables
-var randomNum = 0
+    //scoreboard
+    var winCounter = 0;
+    var lossCounter = 0;
+
+    //computer generate random number between 19-120
+    var randomNum = Math.floor(Math.random() * 101 + 19)
+    //append randomNum to html browser
+    $("#randomNumber").text(randomNum);
 
 
-var crystal1 = 0
-var crystal2 = 0
-var crystal3 = 0
-var crystal4 = 0
+    // rename with Random included
+    //computer generate hidden 4 random crystal values between 1- 12
+    var crystal1 = Math.floor(Math.random() * 10 + 2)
+    console.log(crystal1);
 
-var totalScore = 0;
+    var crystal2 = Math.floor(Math.random() * 10 + 2)
+    console.log(crystal2);
 
+    var crystal3 = Math.floor(Math.random() * 10 + 2)
+    console.log(crystal3);
 
-//scoreboard
-var wins = 0;
-var losses = 0;
-
-//computer generate random number between 19-120
-var randomNum = Math.floor(Math.random()*101 +19)
-//append randomNum to html browser
-$("#randomNumber").text(randomNum);
+    var crystal4 = Math.floor(Math.random() * 10 + 2)
+    console.log(crystal4);
 
 
-//computer generate hidden 4 random crystal values between 1- 12
-var crystal1 = Math.floor(Math.random()*10 +2)
-console.log(crystal1);
 
-var crystal2 = Math.floor(Math.random() * 10 + 2)
-console.log(crystal2);
+    //crystal5.value
 
-var crystal3 = Math.floor(Math.random() * 10 + 2)
-console.log(crystal3);
+    //hide crystal amount until player clicks crystal
 
-var crystal4 = Math.floor(Math.random() * 10 + 2)
-console.log(crystal4);
+    // on clicking a crystal, add random crystal1 
+    // click each crystal, console.log random crystal value
+    $("#crystal-1").on("click", function () {
+        console.log(crystal1);
+        // crystalOneScore += crystal1;
+        totalScore += crystal1;
+        // console.log(crystalOneScore)
+        console.log('totalScore', totalScore)
+        //add the value to the to var totalScore
+        $("#total-score").text(totalScore);
 
-var crystal5 = {
-    color:"",
-    value:"",
-    clicked:true
-}
-//crystal5.value
+    })
 
-//hide crystal amount until player clicks crystal
 
-//click crystal
+    $("#crystal-2").on("click", function () {
+        console.log(crystal2);
+    })
+
+    $("#crystal-3").on("click", function () {
+        console.log(crystal3);
+    })
+
+    $("#crystal-4").on("click", function () {
+        console.log(crystal4);
+    })
+
+    console.log('totalScore', totalScore)
+
+
     //update player score counter
 
-//if player score === computer random number
+    //if player score === computer random number
     //increase wins +1
 
-//if player score > computer random number
+    //if player score > computer random number
     //increase losses by +1
 
-//game restarts if player wins or loses
+    //game restarts if player wins or loses
 
-//computer generates new random number & 4 new random crystal values
+    //computer generates new random number & 4 new random crystal values
 
 
 
