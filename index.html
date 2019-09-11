@@ -24,6 +24,7 @@
 </head>
 
 <body>
+    <div class=container>
 
     <div class="jumbotron text-center">
         <h1 class="display-4">Crystals Collector!</h1>
@@ -42,11 +43,18 @@
         </hr>
     </div>
 
-    </div>
+    
+
 
     <div class="row" id="gameSection">
-        <div class="col md 4">Random Number:
-            <span id="randomNumber"></span>
+        <div class="col md 4">
+            
+        
+        <div class="card">
+            <div class="card-body">
+                Random Number:<span id="randomNumber"></span>
+            </div>
+        </div>
         </div>
 
         <div class="col md 8" id="crystalButton">
@@ -65,7 +73,17 @@
 
     <div class="row">
         <div class="col md 6">
-            <p>Your total score is: <span id="total-score"></span></p>
+            <div class="card">
+                <div class="card-body">
+                    Your total score is: <span id="total-score"></span>
+                    
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="col md 6">
+
         </div>
     </div>
 
@@ -74,12 +92,25 @@
 
     <div class="row">
         <div class="col md 6" id="scoreboard">
-            <strong>Wins: </strong> <span id="win-counter">0</span>
-            <br>
-            <strong>Losses: </strong> <span id="loss-counter">0</span>
+            <div class="card">
+                <div class="card-body">
+                    Wins: </strong> <span id="win-counter">0</span>
+
+                    <br>
+                    <br>
+
+                    Losses: </strong> <span id="loss-counter">0</span>
+                </div>
+            </div>
+            
+
+        </div>
+        <div class="col md 6">
 
         </div>
     </div>
+    </div>
+    
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
