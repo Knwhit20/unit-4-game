@@ -1,7 +1,6 @@
-# unit-4-game
-Unit 4 game-crystal game 
+Crystal Collector
 
-https://knwhit20.github.io/unit-4-game/
+Deployed at: https://knwhit20.github.io/unit-4-game/
 
  Here's how the game works:
 
